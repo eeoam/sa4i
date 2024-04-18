@@ -1,0 +1,38 @@
+name: sa4i
+description: An application which utilizes actuarial concepts to solve a pressing risk management problem related to insurance.
+
+language: GHC2021
+
+default-extensions:
+  - DataKinds
+  - DeriveAnyClass
+  - DerivingStrategies
+  - LambdaCase
+  - NoStarIsType
+  - TemplateHaskell
+  - TypeFamilies
+  - DefaultSignatures
+  - UndecidableInstances
+
+dependencies:
+  - base
+  - large-anon
+  - finite-typelits
+  - ghc-typelits-knownnat
+  - ghc-typelits-natnormalise
+  - vector
+  - bytestring
+  - text
+  - string-interpolate
+  - formatting
+  - download
+
+library:
+   source-dirs: src
+   ghc-options: 
+     - -fplugin=Data.Record.Anon.Plugin 
+     - -fplugin=GHC.TypeLits.KnownNat.Solver
+     - -fplugin=GHC.TypeLits.Normalise
+
+
+
