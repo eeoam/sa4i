@@ -9,6 +9,7 @@ default-extensions:
   - DerivingStrategies
   - LambdaCase
   - NoStarIsType
+  - OverloadedStrings
   - TemplateHaskell
   - TypeFamilies
   - DefaultSignatures
@@ -25,7 +26,7 @@ dependencies:
   - text
   - string-interpolate
   - formatting
-  - download
+  - http-conduit
 
 library:
    source-dirs: src
@@ -34,5 +35,8 @@ library:
      - -fplugin=GHC.TypeLits.KnownNat.Solver
      - -fplugin=GHC.TypeLits.Normalise
 
-
+#executables:
+#  sa4i-go:
+#    main: Main.hs
+#    source-dirs: app
 
