@@ -1,4 +1,6 @@
 name: sa4i
+version: 0.0.0
+synopsis: A proof of concept
 description: An application which utilizes actuarial concepts to solve a pressing risk management problem related to insurance.
 
 language: GHC2021
@@ -16,11 +18,11 @@ default-extensions:
   - UndecidableInstances
 
 dependencies:
-  - base
-  - large-anon
   - finite-typelits
   - ghc-typelits-knownnat
   - ghc-typelits-natnormalise
+  - base
+  - large-anon
   - vector
   - bytestring
   - text
